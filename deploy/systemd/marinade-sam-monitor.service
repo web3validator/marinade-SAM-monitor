@@ -1,0 +1,21 @@
+[Unit]
+Description=Marinade SAM Monitor
+Documentation=https://github.com/web3validator/marinade-SAM-monitor
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/marinade-SAM-monitor
+EnvironmentFile=/etc/marinade-sam-monitor.env
+ExecStart=/opt/marinade-SAM-monitor/.venv/bin/marinade-sam-monitor
+DynamicUser=yes
+StateDirectory=marinade-sam-monitor
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/marinade-sam-monitor
+
+[Install]
+WantedBy=multi-user.target

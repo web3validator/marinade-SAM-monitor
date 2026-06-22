@@ -1,0 +1,13 @@
+[Unit]
+Description=Run Marinade SAM Monitor instance %i every 30 minutes
+Documentation=https://github.com/web3validator/marinade-SAM-monitor
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=30min
+RandomizedDelaySec=2min
+Persistent=true
+Unit=marinade-sam-monitor@%i.service
+
+[Install]
+WantedBy=timers.target

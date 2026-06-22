@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marinade-sam-monitor"
+version = "1.0.0"
+description = "Read-only Telegram monitor for Marinade SAM validator state"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "web3validator" }
+]
+keywords = ["solana", "marinade", "validator", "sam", "telegram", "monitoring"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: System Administrators",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: System :: Monitoring",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/web3validator/marinade-SAM-monitor"
+Issues = "https://github.com/web3validator/marinade-SAM-monitor/issues"
+
+[project.scripts]
+marinade-sam-monitor = "marinade_sam_monitor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

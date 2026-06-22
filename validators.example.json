@@ -1,0 +1,28 @@
+{
+  "telegram_token": "REPLACE_WITH_TELEGRAM_BOT_TOKEN",
+  "telegram_chat_id": "REPLACE_WITH_TELEGRAM_CHAT_ID",
+  "defaults": {
+    "min_bond_epochs": 4,
+    "ideal_bond_epochs": 12,
+    "alert_repeat_sec": 43200,
+    "api_failure_threshold": 2,
+    "api_timeout_sec": 25,
+    "status_every_sec": 86400,
+    "alert_bidding_events": false,
+    "max_commission_pct": 7,
+    "bad_uptime_threshold": 0.8
+  },
+  "validators": [
+    {
+      "name": "Validator A",
+      "vote_account": "REPLACE_WITH_VALIDATOR_A_VOTE_ACCOUNT",
+      "state_file": "state/validator-a.json"
+    },
+    {
+      "name": "Validator B",
+      "vote_account": "REPLACE_WITH_VALIDATOR_B_VOTE_ACCOUNT",
+      "state_file": "state/validator-b.json",
+      "telegram_thread_id": "OPTIONAL_TOPIC_ID"
+    }
+  ]
+}
