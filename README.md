@@ -138,6 +138,8 @@ This is a monitoring heuristic, not financial advice and not a replacement for M
 
 ## Running with systemd
 
+For a full production-style runbook, including `/opt`, `/etc`, `/var/lib` layout, smoke tests, cron migration, upgrades, and rollback, see [`docs/deployment.md`](docs/deployment.md).
+
 Single validator example:
 
 ```bash
@@ -154,6 +156,8 @@ Check logs:
 ```bash
 journalctl -u marinade-sam-monitor.service -n 100 --no-pager
 ```
+
+For common systemd, Telegram env, and state-directory issues, see [`docs/troubleshooting.md`](docs/troubleshooting.md).
 
 Multi-validator pattern:
 
